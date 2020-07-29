@@ -1,6 +1,6 @@
 <?php
 echo "test4";
-$servername = "10.7.252.12:3306";
+$servername = "10.7.252.12";
 $username = "root";
 $password = "test";
 
