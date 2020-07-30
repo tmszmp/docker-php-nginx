@@ -3,17 +3,12 @@
 		private $conn;
 		private $table = 'cities';
 
-		public $ID;
-		public $geo_point;
-		public $name;
-		public $plz;
-
 		public function __construct($db){
 			$this->conn = $db;
 		}
 
 		public function read(){
-			$query = 'SELECT * FROM ' . $this->table . 'ORDER BY name';
+			$query = 'SELECT * FROM ' . $this->table . 'ORDER BY name LIMIT 0,10';
 			$stmt = $this->conn->prepare($query);
 			$stmt->execute();
 			return $stmt;
