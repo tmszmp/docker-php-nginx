@@ -1,7 +1,7 @@
 <?php
 echo "test5";
 $servername = "10.7.252.12";
-$username = "root";
+$username = "root2";
 $password = "test";
 $db = "cities";
 
