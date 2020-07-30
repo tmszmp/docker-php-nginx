@@ -24,8 +24,7 @@ while($row = $result->fetch_assoc()) {
 }*/
 	$file = "https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02";
 	$data = file_get_contents($file);
-	$data = mb_substr($data, strpos($data, '{'));
-	$data = mb_substr($data, 0, -1);
+	echo $data;
 	$result = json_decode($data, true);
 	echo json_encode($result);
 ?> 
