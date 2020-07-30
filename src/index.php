@@ -27,5 +27,5 @@ while($row = $result->fetch_assoc()) {
 	$data = mb_substr($data, strpos($data, '{'));
 	$data = mb_substr($data, 0, -1);
 	$result = json_decode($data, true);
-	echo $result;
+	echo json_encode($result);
 ?> 
