@@ -15,15 +15,15 @@
 	$posts_arr['city-data'] = array();
 	$posts_arr['wetter-data'] = array();
 	while($row = $result->fetch_assoc()) {
-	   $post_item = array( 'id' => $row['ID'], 'geo_point' => $row['geo_point'], 'name' => $row['name'], 'plz' => $row['plz']);
+		$arr = explode(',', $row['geo_point']);
+		$lat = $arr[0];
+		$lon = $arr[1];
+	   $post_item = array( 'id' => $row['ID'], 'lon' => $lon, 'lat' => $lat,'name' => $row['name'], 'plz' => $row['plz']);
 	array_push($posts_arr['city-data'], $post_item);
 	}
 	$wetter = new Wetter();
 	$city = $posts_arr["city-data"];
-	$arr = explode(',', $city[0]["geo_point"]);
-	$lat = $arr[0];
-	$lon = $arr[1];
-	$wetter_arr = $wetter->read($lat,$lon);
+	$wetter_arr = $wetter->read($city[0]["lat"],$city[0]["lon"]);
 	array_push($posts_arr['wetter-data'], $wetter_arr);
 	echo json_encode($posts_arr);
 
