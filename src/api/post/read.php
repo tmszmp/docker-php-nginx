@@ -14,11 +14,12 @@
 	$posts_arr = array();
 	$posts_arr['city-data'] = array();
 	$posts_arr['wetter-data'] = array();
+	echo "test0";
 	while($row = $result->fetch_assoc()) {
 	   $post_item = array( 'id' => $row['ID'], 'geo_point' => $row['geo_point'], 'name' => $row['name'], 'plz' => $row['plz']);
 	array_push($posts_arr['city-data'], $post_item);
 	}
-	echo "test";
+	echo "test1";
 	$wetter = new Wetter();
 	$arr = explode(',', $posts_arr["city-data"]["geo_point"]);
 	$lat = $arr[0];
