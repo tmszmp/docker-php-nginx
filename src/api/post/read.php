@@ -19,7 +19,7 @@
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			extract($row);
 			$post_item = array( 'id' => $ID, 'geo_point' => $geo_point, 'name' => $name, 'plz' => $plz);
-			array_push($post_arr['data'], $post_item);
+			array_push($posts_arr['data'], $post_item);
 		}
 
 		echo json_encode($posts_arr);
