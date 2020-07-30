@@ -18,7 +18,8 @@ echo "Connected successfully";
 $query = 'SELECT * FROM cities WHERE 1 ORDER BY name LIMIT 0,10';
 $stmt = $conn->prepare($query);
 $stmt->execute();
-while($row = $stmt->fetch_assoc()) {
+$result = $stmt->get_result();
+while($row = $result->fetch_assoc()) {
    echo json_encode($row);
 }
 ?> 
