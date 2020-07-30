@@ -20,14 +20,14 @@
 	array_push($posts_arr['city-data'], $post_item);
 	}
 	echo "test1";
-	$wetter = new Wetter();
+	/*$wetter = new Wetter();
 	$arr = explode(',', $posts_arr["city-data"]["geo_point"]);
 	$lat = $arr[0];
 	$lon = $arr[1];
 	echo "test2";
 	$wetter_arr = $wetter->read($lat,$lon);
 	array_push($posts_arr['wetter-data'], $wetter_arr);
-
+*/
 	echo json_encode($posts_arr);
 
 ?>
