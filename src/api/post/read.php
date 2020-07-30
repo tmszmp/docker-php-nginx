@@ -18,8 +18,12 @@
 	   $post_item = array( 'id' => $row['ID'], 'geo_point' => $row['geo_point'], 'name' => $row['name'], 'plz' => $row['plz']);
 	array_push($posts_arr['city-data'], $post_item);
 	}
+	echo "test";
 	$wetter = new Wetter();
-	$wetter_arr = $wetter->read($posts_arr["data"]["coord"]["lat"],$posts_arr["data"]["coord"]["lon"]);
+	$lat = substr($posts_arr["city-data"]["geo_point"], 0, )
+	$lon = 
+	echo "test2";
+	$wetter_arr = $wetter->read($lat,$lon);
 	array_push($posts_arr['wetter-data'], $wetter_arr);
 
 	echo json_encode($posts_arr);
