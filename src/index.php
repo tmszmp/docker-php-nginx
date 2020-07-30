@@ -15,10 +15,10 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$query = 'SELECT * FROM cities ORDER BY name LIMIT 0,10';
+$query = 'SELECT * FROM cities WHERE 1 ORDER BY name LIMIT 0,10';
 $stmt = $conn->prepare($query);
 $stmt->execute();
-while($row = $stmt->fetch()) {
+while($row = $stmt->fetch_assoc()) {
    echo json_encode($row);
 }
 ?> 
