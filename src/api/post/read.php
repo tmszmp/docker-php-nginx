@@ -18,20 +18,13 @@
 		$posts_arr['data'] = array();
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			extract($row);
-			$post_item = array(
-				'id' => $ID,
-				'geo_point' => $geo_point,
-				'name' => $name,
-				'plz' => $plz
-			);
+			$post_item = array( 'id' => $ID, 'geo_point' => $geo_point, 'name' => $name, 'plz' => $plz);
 			array_push($post_arr['data'], $post_item);
 		}
 
 		echo json_encode($posts_arr);
 	}else{
-		echo json_encode(
-			array('message' => 'Nothing Found')
-		);
+		echo json_encode(array('message' => 'Nothing Found'));
 	}
 
 ?>

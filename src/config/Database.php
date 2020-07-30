@@ -2,6 +2,7 @@
 	class Database{
 		private $host = '10.7.252.12';
 		private $db_name = 'cities';
+		private $username = 'root';
 		private $password = 'test';
 		private $conn;
 
