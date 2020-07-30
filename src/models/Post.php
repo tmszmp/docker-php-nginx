@@ -3,7 +3,7 @@
 		private $conn;
 		private $table = 'cities';
 
-		public $id;
+		public $ID;
 		public $geo_point;
 		public $name;
 		public $plz;
