@@ -19,7 +19,8 @@
 	array_push($posts_arr['city-data'], $post_item);
 	}
 	$wetter = new Wetter();
-	$arr = explode(',', $posts_arr["city-data"]["geo_point"]);
+	$city = $posts_arr["city-data"];
+	$arr = explode(',', $city["geo_point"]);
 	echo var_dump($arr);
 	$lat = $arr[0];
 	$lon = $arr[1];
