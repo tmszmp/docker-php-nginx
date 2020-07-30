@@ -12,6 +12,7 @@
 			$query = 'SELECT * FROM ' . $this->table . 'ORDER BY name LIMIT 0,10';
 			$stmt = $this->conn->prepare($query);
 			$stmt->execute();
+			echo 'test3';
 			return $stmt;
 		}
 	}
