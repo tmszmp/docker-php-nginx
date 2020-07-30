@@ -22,7 +22,10 @@ $result = $stmt->get_result();
 while($row = $result->fetch_assoc()) {
    echo json_encode($row);
 }*/
-	echo http_get("https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02");
-	$response = array(json_decode(http_get("https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02")));
-	echo json_encode($response);
+	$file = "https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02";
+	$data = file_get_contents($file);
+	$data = mb_substr($data, strpos($data, '{'));
+	$data = mb_substr($data, 0, -1);
+	$result = json_decode($data, true);
+	echo $result;
 ?> 
