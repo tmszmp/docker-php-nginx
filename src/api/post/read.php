@@ -4,7 +4,7 @@
 	$plz =  "04435";//$_POST['plz'];
 	include_once '../../config/Database.php';
 	include_once '../../models/Post.php';
-	include_once '../../models/Wetter.php';
+	//include_once '../../models/Wetter.php';
 
 	$database = new Database();
 	$db = $database->connect();
