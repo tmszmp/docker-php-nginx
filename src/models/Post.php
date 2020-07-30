@@ -8,6 +8,7 @@
 		}
 
 		public function read(){
+			echo 'test';
 			$query = 'SELECT * FROM ' . $this->table . 'ORDER BY name LIMIT 0,10';
 			$stmt = $this->conn->prepare($query);
 			$stmt->execute();
