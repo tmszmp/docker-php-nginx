@@ -3,7 +3,7 @@ echo "test5";
 $servername = "10.7.252.12";
 $username = "root";
 $password = "test";
-$db = 'cities';
+$db = "cities";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db);
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$query = 'SELECT * FROM ' . $this->table . 'ORDER BY name LIMIT 0,10';
+$query = 'SELECT * FROM cities ORDER BY name LIMIT 0,10';
 $stmt = $conn->prepare($query);
 $stmt->execute();
 while($row = $statement->fetch()) {
