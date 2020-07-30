@@ -1,15 +1,15 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
 	header('Content-Type: application/json');
-
+	echo "pre";
 	include_once '../../config/Database.php';
 	include_once '../../models/Post.php';
 
 	$database = new Database();
 	$db = $database->connect();
-
+	echo "db";
 	$post = new Post($db);
-
+	echo "post";
 	$stmt = $post->read();
 	$result = $stmt->get_result();
 	while($row = $result->fetch_assoc()) {
