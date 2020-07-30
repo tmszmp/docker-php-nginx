@@ -8,13 +8,11 @@
 
 		public function connect(){
 			$this->conn = null;
-			try{
-				$this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
-				$this->conn-> setAttribute(PDO::ATTR_ERRMODE, PDO::EEMODE_EXEPTION);
-			}catch(PDOExeption $e){
-				echo 'Failure:' . $e->getMessage();
+			$this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
+			if ($conn->connect_error) {
+				echo "failure";
+  			die("Connection failed: " . $conn->connect_error);
 			}
-
 			return $this->conn;
 		}
 	}
