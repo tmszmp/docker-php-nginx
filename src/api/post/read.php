@@ -1,7 +1,6 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
 	header('Content-Type: application/json');
-	echo "pre";
 	include_once '../../config/Database.php';
 	include_once '../../models/Post.php';
 
