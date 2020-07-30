@@ -8,6 +8,7 @@
 			$data = file_get_contents($file);
 			$result = json_decode($data, true);
 			return $result;
+			//test
 		}
 	}
 ?>
