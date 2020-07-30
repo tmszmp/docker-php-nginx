@@ -5,6 +5,7 @@
 
 		public function read($lat, $lon){
 			$file = $url . "?lat=" . $lat . "&lon=" . $lon . "&appid=" . $key;
+			echo $file;
 			$data = file_get_contents($file);
 			$result = json_decode($data, true);
 			return $result;
