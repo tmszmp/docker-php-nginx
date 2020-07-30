@@ -20,8 +20,9 @@
 	}
 	echo "test";
 	$wetter = new Wetter();
-	$lat = substr($posts_arr["city-data"]["geo_point"], 0, )
-	$lon = 
+	$arr = explode(',', $posts_arr["city-data"]["geo_point"]);
+	$lat = $arr[0];
+	$lon = $arr[1];
 	echo "test2";
 	$wetter_arr = $wetter->read($lat,$lon);
 	array_push($posts_arr['wetter-data'], $wetter_arr);
