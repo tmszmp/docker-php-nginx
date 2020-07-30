@@ -1,7 +1,7 @@
 <?php
 	class Wetter {
-		private $url = 'api.openweathermap.org/data/2.5/weather';
-		private $key = '00c76f42834a33627260d58d29bebdf4';
+		private $url = 'samples.openweathermap.org/data/2.5/weather';
+		private $key = '439d4b804bc8187953eb36d2a8c26a02';
 
 		public function read($lat, $lon){
 			$file = $url . "?lat=" . $lat . "&lon=" . $lon . "&appid"=$key;
