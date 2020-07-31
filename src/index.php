@@ -1,5 +1,9 @@
 <?php
-echo "test7";
+echo "test8";
+$methode = $_SERVER['REQUEST_METHOD'];
+$req = explode('/', trim($_SERVER['PATH_INFO'],'/'));
+echo var_dump($req);
+/*
 $servername = "10.7.252.12";
 $username = "root2";
 $password = getenv('MYSQL_ROOT_PASSWORD');
@@ -21,7 +25,7 @@ $result = $stmt->get_result();
 while($row = $result->fetch_assoc()) {
    echo json_encode($row);
 }
-
+*/
 
 
 ?> 
