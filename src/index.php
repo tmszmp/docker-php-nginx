@@ -1,7 +1,7 @@
 <?php
-echo "test6";
+echo "test7";
 $servername = "10.7.252.12";
-$username = "root2";
+$username = $_ENV["MYSQL_ROOT_PASSWORD"];
 $password = "test";
 $db = "cities";
 
