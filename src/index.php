@@ -7,18 +7,24 @@
 	$plz = null;
 	$methode = $_SERVER['REQUEST_METHOD'];
 	$req = explode('/', trim($_SERVER['REQUEST_URI'],'/'));
-	switch($req[1]){
-		case 'plz':
-			$plz = $req[2];
-			break;
-	}
 	switch ($methode) {
 	  case 'GET':
 		$database = new Database();
 		$db = $database->connect();
 		$post = new Cities($db);
-		$stmt = $post->read($plz);
-		$result = $stmt->get_result();
+		$result = null;
+		switch($req[1]){
+			case 'plz':
+				$plz = $req[2];
+				$stmt = $post->read_plz($plz);
+				$result = $stmt->get_result();
+				break;
+			case 'ort':
+				$ort = $req[2];
+				$stmt = $post->read_ort($ort);
+				$result = $stmt->get_result();
+				break;
+		}
 		$posts_arr = array();
 		$posts_arr['city-data'] = array();
 		$posts_arr['wetter-data'] = array();
