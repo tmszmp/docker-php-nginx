@@ -3,7 +3,7 @@
 		private $host = '10.7.252.12';
 		private $db_name = 'cities';
 		private $username = 'root2';
-		private $password = 'test';
+		private $password = getenv('MYSQL_ROOT_PASSWORD');
 		private $conn;
 
 		public function connect(){
