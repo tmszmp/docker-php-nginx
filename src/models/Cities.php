@@ -1,5 +1,5 @@
 <?php
-	class Post {
+	class Cities {
 		private $conn;
 		private $table = 'cities';
 
