@@ -16,7 +16,7 @@
 		}
 
 		public function read_ort($ort){
-			$query = 'SELECT * FROM cities WHERE name LIKE ? ORDER BY name LIMIT 0,10';
+			$query = 'SELECT * FROM cities WHERE name LIKE ? ORDER BY plz LIMIT 0,10';
 			$stmt = $this->conn->prepare($query);
 			$stmt->bind_param('s', $ort);
 			$stmt->execute();
