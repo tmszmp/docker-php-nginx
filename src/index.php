@@ -4,7 +4,7 @@
 	include_once 'config/Database.php';
 	include_once 'models/Cities.php';
 	include_once 'models/Wetter.php';
-
+	$plz = null;
 	$methode = $_SERVER['REQUEST_METHOD'];
 	$req = explode('/', trim($_SERVER['REQUEST_URI'],'/'));
 	echo var_dump($req);
