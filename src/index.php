@@ -1,10 +1,9 @@
 <?php
 echo "test7";
 $servername = "10.7.252.12";
-$username = "root";
-$password = "test";
+$username = "root2";
+$password = getenv('MYSQL_ROOT_PASSWORD');
 $db = "cities";
-echo getenv('MYSQL_ROOT_PASSWORD');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db);
 
