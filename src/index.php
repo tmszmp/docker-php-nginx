@@ -1,5 +1,5 @@
 <?php
-echo "test5";
+echo "test6";
 $servername = "10.7.252.12";
 $username = "root2";
 $password = "test";
