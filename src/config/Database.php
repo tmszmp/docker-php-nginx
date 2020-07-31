@@ -3,8 +3,12 @@
 		private $host = '10.7.252.12';
 		private $db_name = 'cities';
 		private $username = 'root2';
-		private $password = getenv('MYSQL_ROOT_PASSWORD');
+		private $password = null;
 		private $conn;
+
+		public function __construct() {
+        	$this->password = getenv('MYSQL_ROOT_PASSWORD');
+    	}
 
 		public function connect(){
 			$this->conn = null;
