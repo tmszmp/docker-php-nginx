@@ -1,9 +1,9 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
 	header('Content-Type: application/json');
-	include_once 'api/config/Database.php';
-	include_once 'api/models/Cities.php';
-	include_once 'api/models/Wetter.php';
+	include_once 'config/Database.php';
+	include_once 'models/Cities.php';
+	include_once 'models/Wetter.php';
 
 	$methode = $_SERVER['REQUEST_METHOD'];
 	$req = explode('/', trim($_SERVER['REQUEST_URI'],'/'));
