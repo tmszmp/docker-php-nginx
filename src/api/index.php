@@ -2,7 +2,7 @@
 	header('Access-Control-Allow-Origin: *');
 	header('Content-Type: application/json');
 	include_once 'config/Database.php';
-	include_once 'models/Post.php';
+	include_once 'models/Cities.php';
 	include_once 'models/Wetter.php';
 
 	$methode = $_SERVER['REQUEST_METHOD'];
