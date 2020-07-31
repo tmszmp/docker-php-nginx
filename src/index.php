@@ -1,8 +1,10 @@
 <?php
 echo "test8";
 $methode = $_SERVER['REQUEST_METHOD'];
+echo $_SERVER['PATH_INFO'];
 $req = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 echo var_dump($req);
+echo var_dump($_SERVER);
 /*
 $servername = "10.7.252.12";
 $username = "root2";
