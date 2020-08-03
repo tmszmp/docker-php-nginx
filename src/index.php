@@ -1,6 +1,6 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
-	header('Content-Type: application/json');
+	header('Content-Type: application/json; charset=utf-8');
 	include_once 'config/Database.php';
 	include_once 'models/Cities.php';
 	include_once 'models/Wetter.php';
